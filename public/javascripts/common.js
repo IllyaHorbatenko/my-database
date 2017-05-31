@@ -1,5 +1,3 @@
-
-
 $('#add').click(function () {
 	var data = {
 		name: $(this).siblings('.name').val(),
@@ -12,8 +10,8 @@ $('#add').click(function () {
 		data: data, // данные для отправки
 		success: function (data) {
 			$('.tasks').html(' ');
-			for(var i in data){
-				$('.tasks').append('<div>'+JSON.stringify(data[i])+'</div>')
+			for (var i in data) {
+				$('.tasks').append('<div>' + JSON.stringify(data[i]) + '</div>')
 			}
 		}
 	});
@@ -30,8 +28,8 @@ $('#delete').click(function () {
 		data: data, // данные для отправки
 		success: function (data) {
 			$('.tasks').html(' ');
-			for(var i in data){
-				$('.tasks').append('<div>'+JSON.stringify(data[i])+'</div>')
+			for (var i in data) {
+				$('.tasks').append('<div>' + JSON.stringify(data[i]) + '</div>')
 			}
 		}
 	});
@@ -51,8 +49,8 @@ $('#update').click(function () {
 		success: function (data) {
 
 			$('.tasks').html(' ');
-			for(var i in data){
-				$('.tasks').append('<div>'+JSON.stringify(data[i])+'</div>')
+			for (var i in data) {
+				$('.tasks').append('<div>' + JSON.stringify(data[i]) + '</div>')
 			}
 		}
 	});
@@ -67,10 +65,10 @@ $('#search').click(function () {
 		// dataType: 'json', // ответ ждем в json формате
 		data: data, // данные для отправки
 		success: function (data) {
-			if(data.length !== 0){
+			if (data.length !== 0) {
 				$('.tasks').html(' ');
-				for(var i in data){
-					$('.tasks').append('<div>'+JSON.stringify(data[i])+'</div>')
+				for (var i in data) {
+					$('.tasks').append('<div>' + JSON.stringify(data[i]) + '</div>')
 				}
 			}
 		}
